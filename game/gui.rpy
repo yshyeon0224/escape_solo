@@ -42,7 +42,7 @@ define gui.hover_color = '#f54c84'
 define gui.selected_color = '#f54588'
 
 ## 텍스트 버튼(text button)이 선택되지(selected) 않았을 때 사용됩니다.
-define gui.insensitive_color = '#aaaaaa7f'
+define gui.insensitive_color = '#ffffffff'
 
 ## 채워지지 않은 빈 막대(bar)에 사용됩니다. 이것은 바로 사용되지 않지만, 막대
 ## (bar) 이미지 파일이 재생성됐을 때 사용됩니다.

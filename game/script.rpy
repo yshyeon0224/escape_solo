@@ -21,7 +21,7 @@ image background3_1 = "bg_Seounghyeon/library.jpg"
 image background3_2 = "bg_Seounghyeon/graduation.jpg"
 image background3_3 = "bg_Seounghyeon/itshow.jpg"
 
-image fairy = im.FactorScale("character/fairy.png",0.4)
+image fairy = im.FactorScale("character/fairy.png",1.3)
 
 image boy1 : 
     im.FactorScale("character/Uju/Uju_normal.png",0.5)
@@ -74,9 +74,8 @@ image boy3 5 :
     yalign 0.0
     
 
-
 define player_name = "플레이어이름"
-define p = Character("player_name",dynamic = True,color="#0B6121")
+define p = Character("player_name",dynamic = True)
 ##Character 일때 player_name은 변수랑 같아야함.
 
 # 여기에서부터 게임이 시작합니다.
@@ -98,15 +97,15 @@ label start:
     show fairy at rightCharacter
     "???" "[player_name]!"  with zoomin
     "???" "이것이 네 이름이 맞느냐?"
-    p "누... 누구세요? 토끼가 말을 하네... 내가 잠이 덜 깼나?"
-    "???" "어허! 무엄하도다!"
+    p "누... 누구세요?"
     "???" "나로 말할 것 같으면..."
-    "치치" "네 놈의 소원을 이뤄주러 친히 인간계에 당도한\n 달의 요정 치치님이시다!"
-    "치치" "내 너를 위해 아주 괜찮은 인간 남자 세 명을 엄선해 놨느리라!"
+    "달요정" "네 놈의 소원을 이뤄주러 친히 인간계에 당도한\n 달요정님이시다!"
+    "달요정" "내 너를 위해 아주 괜찮은 인간 남자 세 명을 엄선해 놨느리라!"
     p "아니, 저... 혹시 이거 상황극인가요?"
-    "치치" "예끼 이 놈!!!\n 아직도 정신을 못 차린게냐!" with hpunch
-    "치치" "흥... 하는 말과 행동이 괘씸하나, 내 너의 소원은 이루어 줘야 하니 한 번은 넘어가 주겠노라."
-    "치치" "자, 세 명의 인간 남자 중 마음에 드는 한 명을 선택해 보거라!\n 그 자가 너의 애인이 될 것이니라."
+    "달요정" "예끼 이 놈!!!\n 아직도 정신을 못 차린게냐!" with hpunch
+    "달요정" "흥... 하는 말과 행동이 괘씸하나, 내 너의 소원은 이루어 줘야 하니 한 번은 넘어가 주겠노라."
+    "달요정" "자, 세 명의 인간 남자 중 마음에 드는 한 명을 선택해 보거라!\n 그 자가 너의 애인이 될 것이니라." 
+    hide fairy at Dissolve
     stop sound
     play music "audio/선택.mp3" fadein 2.0
     label choice:
@@ -261,6 +260,8 @@ label love4:
 
     menu:
         "역시 연하는 내 취향이 아니야! 다른 사람을 만나보겠어!":
+            play sound "audio/sound/뾰로롱.mp3"
+            scene background1_3
             jump choice
         "다른 남자는 필요하지 않아. 이대로 끝낼래요!":
             return
