@@ -390,7 +390,7 @@ label jin_love2:
 label jin_love3:
     play music "audio/healthRoom.mp3"
     show boy2 with dissolve
-    m2 "자... 다 됐다." with fadein
+    m2 "자... 다 됐다."
 label abuba:
     stop music
     scene background2_2
