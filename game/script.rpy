@@ -72,7 +72,10 @@ image boy3 4 :
 image boy3 5 :
     im.FactorScale("character/Seounghyeon/Seounghyeon_fw.png",0.5)
     yalign 0.0
-    
+image boy3 6 :
+    im.FactorScale("character/Seounghyeon/Seounghyeon_fw_panic.png",0.5)
+    yalign 0.0
+
 
 define player_name = "플레이어이름"
 define p = Character("player_name",dynamic = True)
@@ -641,6 +644,7 @@ label seng_ending4:
 
 label seng_ending5:
     play music "audio/student.wav" fadein 1.0
+    show boy3 6 with dissolve
     m3 "아.. 가버렸네..."
     "그렇게 난 다시는 선배를 볼 수 없었다."
     "도망치면 안되지!!"
